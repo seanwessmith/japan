@@ -1,54 +1,134 @@
-# React + TypeScript + Vite
+# 🇯🇵 Japan Golden Week Adventure 🌸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully designed, interactive React + TypeScript app showcasing a two-week travel itinerary through Japan during Golden Week (April–May 2025). Built with TailwindCSS, Radix UI, and Mapbox for location tracking.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 📆 **Day-by-Day Itinerary**  
+  Explore each day’s travel plan with location, highlights, and holiday tags.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📊 **Budget Tracker**  
+  Includes daily cost breakdowns, grand totals, and savings/splurge scenarios.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 🗺️ **Live Location Tracker**  
+  Real-time GPS updates, altitude info, zoomable map via Mapbox.
+
+- 📸 **Photo Uploader**  
+  Add photos by location and day to build your personal trip journal.
+
+- 🎫 **Ghibli-Themed Alternatives**  
+  If you can't get Ghibli Museum tickets, explore nearby themed spots and experiences.
+
+- 🧳 **Travel Logistics**  
+  Get info on transit cards, baggage forwarding, data, and flight tips.
+
+- 🔁 **Alternate Routes**  
+  Suggestions for snow corridors, longer Kansai stays, or surf detours.
+
+---
+
+## 🗂️ Project Structure
+
+.
+├── assets/
+│   └── favicon.png
+├── components/ui/
+│   ├── accordion.tsx
+│   ├── alert.tsx
+│   ├── badge.tsx
+│   ├── button.tsx
+│   ├── card.tsx
+│   ├── input.tsx
+│   ├── label.tsx
+│   ├── progress.tsx
+│   ├── switch.tsx
+│   └── tabs.tsx
+├── lib/
+│   └── utils.ts
+├── index.css
+├── main.tsx
+├── map.tsx
+├── japan-one.tsx
+├── japan-two.tsx
+└── vite-env.d.ts
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: React + TypeScript
+- **Styling**: TailwindCSS, custom theme with OKLCH colors
+- **UI Library**: Radix UI + Lucide icons
+- **Maps**: Mapbox GL with real-time location marker
+- **State**: useState + useEffect hooks
+- **Bundler**: Vite
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/japan-itinerary.git
+cd japan-itinerary
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⸻
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+📦 Build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+npm run build
+
+
+
+⸻
+
+🔐 Environment
+
+For the Mapbox component to work, you’ll need a public access token.
+
+mapboxAccessToken="YOUR_MAPBOX_PUBLIC_TOKEN"
+
+Replace it in map.tsx.
+
+⸻
+
+🧪 Customization
+
+You can choose which itinerary file to use by modifying the import in main.tsx:
+
+// Use this for the full-featured experience
+import App from './japan-one.tsx'
+
+// Or use the simplified version
+// import App from './japan-two.tsx'
+
+
+
+⸻
+
+📸 Preview
+
+“14 days of Miyazaki-flavored whimsy, riverside bike rides, late-bloom sakura, and bullet-train speed.”
+
+ 
+
+⸻
+
+🧳 Author
+
+Sean Wesley Smith – @seanwessmith
+
+⸻
+
+📄 License
+
+MIT – feel free to remix for your own travel planning needs!
