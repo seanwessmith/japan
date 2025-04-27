@@ -25,6 +25,7 @@ import {
   MapPin,
   DollarSign,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Data structure for itinerary
 const itineraryData = [
@@ -344,6 +345,12 @@ const JapanItinerary = () => {
           14 days of Miyazaki-flavored whimsy, riverside bike rides, late-bloom
           sakura, and bullet-train speed
         </p>
+        <Link
+          to="/osaka"
+          className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Explore Osaka
+        </Link>
       </header>
 
       <Alert variant="destructive" className="mb-8">
