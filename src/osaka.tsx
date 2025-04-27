@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { Calendar, MapPin, Coffee, Utensils, Info } from "lucide-react";
+import maishima from "./assets/maishima.jpg";
+import knives from "./assets/knives.png";
+import doguyasuji from "./assets/doguyasuji.png";
+import keyhole from "./assets/keyhole.png";
 
 export default function OsakaGuide() {
   const essentialSpots = [
@@ -42,6 +46,7 @@ export default function OsakaGuide() {
       description:
         "A psychedelic waste-to-energy facility designed by Friedensreich Hundertwasser—looks like Gaudí met Willy Wonka.",
       how: "Free tours (Japanese) most weekdays; book via city website, or just photograph the exterior from Maishima Sports Island.",
+      img: maishima,
       icon: <Coffee className="h-5 w-5 text-indigo-500" />,
     },
     {
@@ -49,6 +54,7 @@ export default function OsakaGuide() {
       description:
         "Maze of 1920s row-houses turned indie cafés, record shops & vintage fashion (think Harajuku vibes without crowds).",
       how: "Start at YAMASTORE, then café-hop; most stores open 12-20 h.",
+
       icon: <Coffee className="h-5 w-5 text-indigo-500" />,
     },
     {
@@ -56,6 +62,7 @@ export default function OsakaGuide() {
       description:
         "Tiny four-floor museum focused on Osaka's actor-portrait woodblocks—more humorous & realistic than Edo prints.",
       how: "Try the 30-min woodblock printing workshop (English OK) to make your own souvenir.",
+
       icon: <Coffee className="h-5 w-5 text-indigo-500" />,
     },
     {
@@ -63,6 +70,7 @@ export default function OsakaGuide() {
       description:
         "150 m arcade packed with chef knives, takoyaki griddles & fake-food models—souvenir heaven.",
       how: "Look for Design Pocket to cast your own plastic food magnet (~¥2,500, 30 min).",
+      img: knives,
       icon: <Coffee className="h-5 w-5 text-indigo-500" />,
     },
     {
@@ -70,6 +78,7 @@ export default function OsakaGuide() {
       description:
         "800+ stalls of kimchi, K-beauty, and yakiniku; the scent of charcoal grills fills the arcades.",
       how: "Arrive 10 – 16 h; many shops shutter after 18 h.",
+      img: doguyasuji,
       icon: <Coffee className="h-5 w-5 text-indigo-500" />,
     },
     {
@@ -84,6 +93,7 @@ export default function OsakaGuide() {
       description:
         "Keyhole-shaped 5th-century imperial mounds visible only from observation decks or drones—surreal cityscape.",
       how: "JR Mozu Station → 10 min walk to the 8K visitor center with aerial theater.",
+      img: keyhole,
       icon: <Coffee className="h-5 w-5 text-indigo-500" />,
     },
   ];
@@ -234,7 +244,7 @@ export default function OsakaGuide() {
               >
                 <div className="flex items-start gap-4">
                   {gem.icon}
-                  <div>
+                  <div className="flex flex-col align-middle justify-center">
                     <h3 className="font-bold text-xl text-gray-800">
                       {gem.name}
                     </h3>
@@ -245,6 +255,7 @@ export default function OsakaGuide() {
                         {gem.how}
                       </p>
                     </div>
+                    <img className="mt-2 rounded w-[400px]" src={gem.img} />
                   </div>
                 </div>
               </div>
